@@ -2,7 +2,6 @@
 nav:
   title: Hooks
   path: /hook
-order: 2
 ---
 
 # Change Log

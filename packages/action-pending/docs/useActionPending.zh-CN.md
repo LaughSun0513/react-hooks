@@ -2,7 +2,7 @@
 title: useActionPending
 nav:
   title: Hooks
-  path: /hook
+  path: /zh-CN/hook
 group:
   title: Action Pending
   path: /action-pending
@@ -11,7 +11,7 @@ order: 2
 
 # useActionPending
 
-By providing an async function, this hook creates a wrapped version with a number indicating how many pending calls are on the fly.
+这个Hook提供一个异步的方法，包装了一个数字来告诉你有多少内容正在请求中
 
 ```typescript
 type AsyncFunction = (...args: any[]) => Promise<any>;
@@ -19,6 +19,6 @@ type AsyncFunction = (...args: any[]) => Promise<any>;
 function useActionPending<A extends AsyncFunction>(action: A): [A, number]
 ```
 
-The second value of returned tuple is the `pendingCount`, a simple `!!pendingCount` can be used to check whether there is any unfinished calls and motivates to a loading UI.
+第二个参数`pendingCount`返回一个元组，你可以使用`!!pendingCount`来轻松地判断有多少正在请求的内容，然后加载loading动画。
 
 <code src="./demo/useActionPending.tsx">
